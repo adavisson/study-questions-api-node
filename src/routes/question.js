@@ -1,10 +1,12 @@
 const express = require('express');
-const obj = require('../persistence/seeders/testData');
+const db = require('../persistence/models');
+
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send(obj.questions);
+router.get('/', async (req, res) => {
+  let allQuestions = await db.Question.findAll();
+  res.send(allQuestions);
 });
 
 module.exports = router;

@@ -3,7 +3,7 @@ const db = require('../persistence/models');
 
 var router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => {  
   let allSubjects = await db.Subject.findAll();
   res.json(allSubjects);
 });

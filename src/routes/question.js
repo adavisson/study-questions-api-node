@@ -1,5 +1,5 @@
 const express = require('express');
-const obj = require('../services/testData');
+const obj = require('../persistence/seeders/testData');
 
 const router = express.Router();
 

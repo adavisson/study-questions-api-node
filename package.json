@@ -1,0 +1,23 @@
+{
+  "name": "study-questions-api-node",
+  "version": "1.0.0",
+  "description": "API for study questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adavisson/study-questions-api-node.git"
+  },
+  "author": "akdavisson4@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adavisson/study-questions-api-node/issues"
+  },
+  "homepage": "https://github.com/adavisson/study-questions-api-node#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  }
+}

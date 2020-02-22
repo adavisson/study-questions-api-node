@@ -1,20 +1,18 @@
 const express = require('express');
+const obj = require('../services/testData');
 
 var router = express.Router();
 
-const objs = [
-  {
-    id: 1,
-    name: "JavaScript"
-  },
-  {
-    id: 2,
-    name: "Ruby"
-  }
-];
-
 router.get('/', (req, res) => {
-  res.send(objs);
+  res.send(obj.subjects);
 });
+
+router.get('/:id/questions', (req, res) => {
+  const questions = obj.questions.filter(question => {
+    return question.subject_id.toString() === req.params.id;
+  });
+
+  res.send(questions);
+})
 
 module.exports = router;

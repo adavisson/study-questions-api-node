@@ -4,16 +4,19 @@ const db = require('../persistence/models');
 var router = express.Router();
 
 router.get('/', async (req, res) => {  
-  let allSubjects = await db.Subject.findAll();
+  let allSubjects = await db.Subject.findAll({
+    attributes: ['id', 'name']
+  });
   res.json(allSubjects);
 });
 
-// router.get('/:id/questions', (req, res) => {
-//   const questions = obj.questions.filter(question => {
-//     return question.subject_id.toString() === req.params.id;
-//   });
+router.get('/:id/questions', async (req, res) => {
+  let questions = await db.Question.findAll({
+    where: { subjectId: req.params.id },
+    attributes: ['id', 'question', 'answer', 'subjectId']
+  });
 
-//   res.send(questions);
-// })
+  res.send(questions);
+})
 
 module.exports = router;

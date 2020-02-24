@@ -1,3 +1,7 @@
+/*
+*  Migration for Subjects Table
+*/
+
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {

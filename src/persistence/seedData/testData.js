@@ -1,3 +1,9 @@
+/*
+* A bunch of sample data to seed the database with.
+* This is mainly so large because if host this I do not
+* want any POST routes
+*/
+
 const questions = [
   {
     question: 'What is ORM?',

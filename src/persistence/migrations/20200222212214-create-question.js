@@ -1,3 +1,7 @@
+/*
+*  Migration for Questions table
+*/
+
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {

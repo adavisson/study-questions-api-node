@@ -1,3 +1,5 @@
+// Subject Model
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Subject = sequelize.define('Subject', {

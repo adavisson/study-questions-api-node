@@ -1,5 +1,4 @@
 'use strict';
-
 const obj = require('../seedData/testData');
 
 module.exports = {

@@ -3,6 +3,7 @@ const db = require('../persistence/models');
 
 var router = express.Router();
 
+// index route for subjects
 router.get('/', async (req, res) => {  
   let allSubjects = await db.Subject.findAll({
     attributes: ['id', 'name']
@@ -10,6 +11,7 @@ router.get('/', async (req, res) => {
   res.json(allSubjects);
 });
 
+// route to display all questions belonging to a specific subject
 router.get('/:id/questions', async (req, res) => {
   let questions = await db.Question.findAll({
     where: { subjectId: req.params.id },

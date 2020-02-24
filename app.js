@@ -2,7 +2,7 @@ const subjectRouter = require('./src/routes/subject');
 const questionRouter = require('./src/routes/question');
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 
 //app.use(express.json);
 

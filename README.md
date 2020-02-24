@@ -1,7 +1,7 @@
 # study-questions-api-node
 
 ## About
-An API written in nodejs for https://study-buddy.andydavisson.com
+An API written in nodejs that provides study questions for software developer interviews. 
 
 ## To Run
 1. Clone the repository and install dependencies:

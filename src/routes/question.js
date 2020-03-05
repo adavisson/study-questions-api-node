@@ -12,4 +12,14 @@ router.get('/', async (req, res) => {
   res.send(allQuestions);
 });
 
+// create route for questions
+router.post('/', async (req, res) => {
+  let question = await db.Question.create({
+    question: req.body.question,
+    answer: req.body.answer,
+    subjectId: req.body.subjectId
+  })
+  res.send(question);
+});
+
 module.exports = router;

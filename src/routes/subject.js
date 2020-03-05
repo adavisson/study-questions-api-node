@@ -21,4 +21,9 @@ router.get('/:id/questions', async (req, res) => {
   res.send(questions);
 })
 
+router.post('/', async (req, res) =>{
+  let subject = await db.Subject.create({name: req.body.name});
+  res.send(subject);
+})
+
 module.exports = router;

@@ -21,6 +21,7 @@ router.get('/:id/questions', async (req, res) => {
   res.send(questions);
 })
 
+// create route for Subjects
 router.post('/', async (req, res) =>{
   let subject = await db.Subject.create({name: req.body.name});
   res.send(subject);
